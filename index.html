@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jibby - Tự Phối Jibbitz Cá Tính</title>
+    <meta name="description" content="Biến đôi Crocs của bạn thành phiên bản độc nhất với hàng trăm mẫu charm Jibbitz cao cấp.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#111827',
+                        secondary: '#4B5563',
+                        accent: '#F472B6',
+                        'accent-light': '#FCE7F3',
+                        bg: '#FAFAF9',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-bg text-primary antialiased relative">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-40 glass-effect border-b border-gray-100 transition-all duration-300" id="header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold tracking-tighter text-primary">JIBBY.</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#shop" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Cửa hàng</a>
+                    <a href="#make-it-yours" class="text-sm font-medium text-secondary hover:text-accent transition-colors flex items-center gap-1">
+                        <i class="ph-fill ph-magic-wand text-accent"></i> Tự phối
+                    </a>
+                    <a href="#inspiration" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Cảm hứng</a>
+                </nav>
+
+                <!-- Icons -->
+                <div class="flex items-center space-x-4">
+                    <button class="text-primary hover:text-accent transition-colors p-2" aria-label="Search">
+                        <i class="ph ph-magnifying-glass text-xl"></i>
+                    </button>
+                    <button id="cart-btn" class="text-primary hover:text-accent transition-colors p-2 relative" aria-label="Cart">
+                        <i class="ph ph-handbag text-xl"></i>
+                        <span id="cart-badge" class="absolute top-0 right-0 bg-accent text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center opacity-0 transform scale-0 transition-all duration-300">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="relative bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 pt-10 sm:pt-16 lg:pt-20 px-4 sm:px-6 lg:px-8">
+                    <div class="sm:text-center lg:text-left">
+                        <span class="text-accent font-semibold tracking-wider uppercase text-sm mb-2 block">Make It Yours</span>
+                        <h1 class="text-4xl tracking-tight font-extrabold text-primary sm:text-5xl md:text-6xl">
+                            <span class="block">Biến đôi Crocs của bạn</span>
+                            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-500">thành bản độc nhất.</span>
+                        </h1>
+                        <p class="mt-3 text-base text-secondary sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                            Khám phá hàng trăm mẫu charm cao cấp. Tự do phối hợp, thể hiện cá tính và phong cách riêng của bạn.
+                        </p>
+                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                            <div class="rounded-full shadow">
+                                <a href="#make-it-yours" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary hover:bg-gray-800 transition-colors md:py-4 md:text-lg md:px-10">
+                                    Bắt đầu phối ngay <i class="ph ph-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-accent-light">
+                <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="file:///C:/Users/Dell/.gemini/antigravity-ide/brain/524ab2bf-f9d1-47ce-b1ab-0f22420a5520/hero_crocs_1786621689487.jpg" alt="Crocs with charms">
+            </div>
+        </section>
+
+        <!-- Make It Yours (Tự phối) Section -->
+        <section id="make-it-yours" class="py-16 bg-bg border-y border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-primary mb-2">Combo Của Bạn</h2>
+                    <p class="text-secondary max-w-2xl mx-auto">Chọn nhiều charm để tạo thành set. Mua càng nhiều, giảm càng sâu!</p>
+                </div>
+                
+                <div class="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-gray-100">
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <!-- Builder Area -->
+                        <div class="flex-1">
+                            <div class="flex justify-between items-end mb-4">
+                                <h3 class="font-semibold text-lg flex items-center gap-2">
+                                    <i class="ph-fill ph-magic-wand text-accent"></i> Charm đã chọn (<span id="combo-count">0</span>)
+                                </h3>
+                                <button id="clear-combo-btn" class="text-sm text-gray-400 hover:text-red-500 transition-colors hidden">Xóa tất cả</button>
+                            </div>
+                            
+                            <!-- Selected Charms Slots -->
+                            <div class="bg-bg rounded-2xl p-4 min-h-[120px] flex flex-wrap gap-3 items-center border-2 border-dashed border-gray-200" id="combo-slots">
+                                <div class="w-full text-center text-gray-400 text-sm py-6">
+                                    Chưa có charm nào được chọn. Hãy thêm từ danh sách bên dưới!
+                                </div>
+                                <!-- Slots will be populated by JS -->
+                            </div>
+
+                            <!-- Progress Bar -->
+                            <div class="mt-6">
+                                <div class="flex justify-between text-xs text-secondary font-medium mb-2" id="combo-milestones">
+                                    <!-- Populated by JS -->
+                                </div>
+                                <div class="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
+                                    <div id="combo-progress" class="h-full bg-accent transition-all duration-500" style="width: 0%"></div>
+                                </div>
+                                <p id="combo-hint" class="text-xs text-accent mt-2 font-medium text-center">Thêm 3 charm để được giảm 5%!</p>
+                            </div>
+                        </div>
+
+                        <!-- Summary Area -->
+                        <div class="w-full lg:w-72 bg-bg rounded-2xl p-6 flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-semibold text-gray-500 text-sm mb-4 uppercase tracking-wider">Tạm tính Combo</h3>
+                                <div class="space-y-2 mb-4 text-sm">
+                                    <div class="flex justify-between">
+                                        <span class="text-secondary">Tổng gốc:</span>
+                                        <span id="combo-subtotal" class="font-medium text-primary">0₫</span>
+                                    </div>
+                                    <div class="flex justify-between text-accent font-medium hidden" id="combo-discount-row">
+                                        <span>Giảm giá (<span id="combo-discount-percent">0</span>%):</span>
+                                        <span id="combo-discount-amount">-0₫</span>
+                                    </div>
+                                </div>
+                                <div class="pt-4 border-t border-gray-200">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <span class="font-semibold text-primary">Tổng cộng:</span>
+                                        <span id="combo-total" class="text-xl font-bold text-primary">0₫</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button id="add-combo-to-cart" class="w-full mt-6 py-3 rounded-xl bg-primary text-white font-medium hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2" disabled>
+                                <i class="ph ph-shopping-cart-simple"></i> Thêm Bộ Vào Giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Section -->
+        <section id="shop" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                    <div>
+                        <h2 class="text-3xl font-bold text-primary">Khám Phá Charm</h2>
+                        <p class="text-secondary mt-1">Chọn những charm yêu thích của bạn</p>
+                    </div>
+                    
+                    <!-- Categories -->
+                    <div class="flex overflow-x-auto hide-scrollbar pb-2 -mx-4 px-4 md:mx-0 md:px-0 md:pb-0 gap-2" id="categories-container">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6" id="products-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Inspiration Section -->
+        <section id="inspiration" class="py-16 bg-bg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-primary mb-2">Cảm Hứng Từ Khách Hàng</h2>
+                    <p class="text-secondary">Xem cách mọi người biến hóa đôi Crocs của họ.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="h-96 rounded-2xl overflow-hidden relative group">
+                        <img src="file:///C:/Users/Dell/.gemini/antigravity-ide/brain/524ab2bf-f9d1-47ce-b1ab-0f22420a5520/lifestyle_gallery_1786621893203.jpg" alt="Lifestyle" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white font-medium">@jennie_style</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="h-[calc(24rem/2-0.5rem)] rounded-2xl overflow-hidden bg-gray-100">
+                             <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=600&q=80" alt="Detail 1" class="w-full h-full object-cover">
+                        </div>
+                        <div class="h-[calc(24rem/2-0.5rem)] rounded-2xl overflow-hidden bg-gray-100">
+                             <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80" alt="Detail 2" class="w-full h-full object-cover">
+                        </div>
+                        <div class="col-span-2 h-[calc(24rem/2-0.5rem)] rounded-2xl overflow-hidden bg-accent-light p-8 flex items-center justify-center text-center">
+                            <div>
+                                <h3 class="text-2xl font-bold text-accent mb-2">#JibbyStyle</h3>
+                                <p class="text-sm text-gray-600">Chia sẻ phong cách của bạn trên Instagram để được feature tại đây!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Reviews Summary Section -->
+        <section class="py-12 bg-white border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+                    <div class="text-center">
+                        <div class="text-5xl font-bold text-primary mb-2">4.9</div>
+                        <div class="flex text-yellow-400 justify-center mb-1">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                        <div class="text-sm text-secondary">Dựa trên 2,540 đánh giá</div>
+                    </div>
+                    <div class="w-px h-16 bg-gray-200 hidden md:block"></div>
+                    <div class="flex gap-4">
+                         <div class="bg-bg p-4 rounded-xl max-w-xs">
+                             <div class="flex text-yellow-400 text-xs mb-2">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                             </div>
+                             <p class="text-sm font-medium mb-1">"Charm siêu xinh, chất lượng tốt!"</p>
+                             <p class="text-xs text-gray-500">Minh Anh - Đã mua hàng</p>
+                         </div>
+                         <div class="bg-bg p-4 rounded-xl max-w-xs hidden sm:block">
+                             <div class="flex text-yellow-400 text-xs mb-2">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                             </div>
+                             <p class="text-sm font-medium mb-1">"Giao hàng nhanh, đóng gói đẹp."</p>
+                             <p class="text-xs text-gray-500">Thảo Vy - Đã mua hàng</p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">JIBBY.</h3>
+                <p class="text-gray-400 text-sm">Thương hiệu Jibbitz thiết kế cao cấp. Nâng tầm phong cách cá nhân của bạn qua từng bước chân.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Hỗ trợ</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors">Chính sách vận chuyển</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Đổi trả & Hoàn tiền</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Câu hỏi thường gặp (FAQ)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Kết nối</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="ph ph-instagram-logo text-2xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="ph ph-tiktok-logo text-2xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="ph ph-facebook-logo text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
+            &copy; 2026 Jibby. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Mini Cart Drawer Overlay -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/40 z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+    
+    <!-- Mini Cart Drawer -->
+    <div id="cart-drawer" class="fixed inset-y-0 right-0 w-full md:w-[400px] bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col">
+        <div class="px-6 py-4 border-b border-gray-100 flex justify-between items-center bg-white">
+            <h2 class="text-lg font-bold flex items-center gap-2">
+                Giỏ Hàng <span id="cart-drawer-count" class="bg-gray-100 text-primary text-xs py-1 px-2 rounded-full">0</span>
+            </h2>
+            <button id="close-cart-btn" class="text-gray-400 hover:text-primary transition-colors p-2 -mr-2">
+                <i class="ph ph-x text-xl"></i>
+            </button>
+        </div>
+        
+        <div class="flex-1 overflow-y-auto p-6" id="cart-items">
+            <!-- Populated by JS -->
+            <div class="flex flex-col items-center justify-center h-full text-center text-gray-400" id="cart-empty-state">
+                <i class="ph ph-handbag text-5xl mb-4 text-gray-200"></i>
+                <p>Giỏ hàng của bạn đang trống</p>
+                <button id="start-shopping-btn" class="mt-4 px-6 py-2 bg-primary text-white text-sm rounded-full font-medium">Mua sắm ngay</button>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-100 p-6 bg-bg">
+            <div class="flex justify-between items-center mb-4">
+                <span class="font-semibold text-gray-600">Tổng cộng:</span>
+                <span class="text-xl font-bold text-primary" id="cart-total-price">0₫</span>
+            </div>
+            <button id="checkout-btn" class="w-full bg-primary text-white py-4 rounded-xl font-medium hover:bg-gray-800 transition-colors flex justify-center items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                Tiến Hành Đặt Hàng <i class="ph ph-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal Overlay -->
+    <div id="checkout-modal-overlay" class="fixed inset-0 bg-black/60 z-[60] flex justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 p-4">
+        <div id="checkout-modal" class="bg-white rounded-3xl w-full max-w-md max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300">
+            <div class="p-6 border-b border-gray-100 flex justify-between items-center sticky top-0 bg-white z-10">
+                <h2 class="text-xl font-bold">Thông tin giao hàng</h2>
+                <button id="close-checkout-btn" class="text-gray-400 hover:text-primary">
+                    <i class="ph ph-x text-xl"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <form id="checkout-form" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Họ và tên *</label>
+                        <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Số điện thoại *</label>
+                        <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Địa chỉ nhận hàng *</label>
+                        <textarea id="address" rows="3" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all resize-none"></textarea>
+                    </div>
+                    <div class="bg-accent-light text-accent-dark p-4 rounded-xl text-sm mt-4 flex gap-2">
+                        <i class="ph-fill ph-info text-lg shrink-0"></i>
+                        <p>Thanh toán khi nhận hàng (COD). Chúng tôi sẽ gọi xác nhận đơn hàng sau khi bạn đặt.</p>
+                    </div>
+                    <button type="submit" class="w-full bg-primary text-white py-4 rounded-xl font-medium hover:bg-gray-800 transition-colors mt-6">
+                        Xác Nhận Đặt Hàng
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black/60 z-[70] flex justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 p-4">
+        <div class="bg-white rounded-3xl p-8 max-w-sm w-full text-center transform scale-95 transition-transform duration-300" id="success-content">
+            <div class="w-16 h-16 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="ph-fill ph-check-circle text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Đặt hàng thành công!</h3>
+            <p class="text-gray-500 mb-6 text-sm">Cảm ơn bạn đã mua sắm tại Jibby. Chúng tôi sẽ sớm liên hệ để giao hàng.</p>
+            <button id="close-success-btn" class="w-full bg-gray-100 text-primary py-3 rounded-xl font-medium hover:bg-gray-200 transition-colors">
+                Tiếp tục mua sắm
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Sticky Bottom Bar (Only visible on small screens when scrolling) -->
+    <div id="mobile-bottom-bar" class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 z-30 transform translate-y-full transition-transform duration-300 md:hidden flex justify-between items-center shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.05)]">
+        <div>
+            <div class="text-xs text-gray-500">Tổng thanh toán</div>
+            <div class="text-lg font-bold text-primary" id="mobile-total">0₫</div>
+        </div>
+        <button id="mobile-checkout-btn" class="bg-primary text-white px-6 py-3 rounded-xl font-medium text-sm flex items-center gap-2">
+            <i class="ph ph-shopping-cart-simple"></i> Giỏ hàng (<span id="mobile-count">0</span>)
+        </button>
+    </div>
+
+    <!-- Load Data and Logic -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
