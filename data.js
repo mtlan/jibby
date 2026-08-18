@@ -1,83 +1,93 @@
 const products = [
   {
     id: 1,
-    name: "Pastel Gummy Bear",
+    name: "Yellow Duck",
     price: 25000,
     category: "cute",
-    image: "file:///C:/Users/Dell/.gemini/antigravity-ide/brain/524ab2bf-f9d1-47ce-b1ab-0f22420a5520/charm_bear_1786621809686.jpg",
+    image: "images/duck.jpg",
     rating: 4.9,
     sold: 1205,
     isBestSeller: true
   },
   {
     id: 2,
-    name: "Daisy Flower",
+    name: "Summer",
     price: 30000,
     category: "nature",
-    image: "file:///C:/Users/Dell/.gemini/antigravity-ide/brain/524ab2bf-f9d1-47ce-b1ab-0f22420a5520/charm_flower_1786621821797.jpg",
+    image: "images/summer.jpg",
     rating: 4.8,
     sold: 840,
     isBestSeller: true
   },
   {
     id: 3,
-    name: "Metallic Red Heart",
+    name: "Avengers",
     price: 35000,
-    category: "love",
-    image: "file:///C:/Users/Dell/.gemini/antigravity-ide/brain/524ab2bf-f9d1-47ce-b1ab-0f22420a5520/charm_heart_1786621879043.jpg",
+    category: "fashion",
+    image: "images/avengers.jpg",
     rating: 5.0,
     sold: 2150,
     isBestSeller: true
   },
   {
     id: 4,
-    name: "Pink Ribbon",
+    name: "Animal Shaped",
     price: 25000,
-    category: "fashion",
-    image: "https://images.unsplash.com/photo-1618641986557-1de223cb2f4f?auto=format&fit=crop&w=400&q=80",
+    category: "animals",
+    image: "images/animal.jpeg",
     rating: 4.7,
     sold: 520,
     isBestSeller: false
   },
   {
     id: 5,
-    name: "Strawberry",
+    name: "Capybara",
     price: 28000,
-    category: "food",
-    image: "https://images.unsplash.com/photo-1518131672697-613becd4fab5?auto=format&fit=crop&w=400&q=80", 
+    category: "animals",
+    image: "images/capybara.jpg",
     rating: 4.6,
     sold: 340,
     isBestSeller: false
   },
   {
     id: 6,
-    name: "Avocado",
+    name: "Twinkle",
     price: 28000,
-    category: "food",
-    image: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&w=400&q=80", 
+    category: "animals",
+    image: "images/twinkle.jpg",
     rating: 4.8,
     sold: 950,
     isBestSeller: true
   },
   {
     id: 7,
-    name: "Cool Doge",
+    name: "Cartoon Cute",
     price: 35000,
-    category: "animals",
-    image: "https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=400&q=80",
+    category: "cute",
+    image: "images/cartoon.jpg",
     rating: 4.9,
     sold: 1540,
     isBestSeller: true
   },
   {
     id: 8,
-    name: "Letter A",
+    name: "Strawberry and Donut",
     price: 20000,
-    category: "letters",
-    image: "https://images.unsplash.com/photo-1614850715649-1d0106293cb1?auto=format&fit=crop&w=400&q=80",
+    category: "food",
+    image: "images/donut.jpg",
     rating: 4.5,
     sold: 400,
     isBestSeller: false
+  },
+  {
+    id: 9,
+    name: "Flower",
+    price: 20000,
+    category: "fashion",
+    image: "images/thapcam.jpg",
+    rating: 4.5,
+    sold: 400,
+    isBestSeller: true
   }
 ];
 
